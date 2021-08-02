@@ -66,9 +66,10 @@ export const StyledProject = styled(Project)`
         &__image {
             display: flex;
             img {
+                object-fit: cover;
+                
                 @media (max-width: 1299px) {
                     width: 100%;
-                    object-fit: cover;
                 }
             }
         }

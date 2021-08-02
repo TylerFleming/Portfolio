@@ -15,10 +15,10 @@ const Project = ({className, name, position, liveLink, gitHub, description, imag
                         <div className="links right">
                         <ul>
                                 <li>
-                                    <a target="_blank" aria-label={`link to Github ${name} Repo`} href={gitHub}> <img src={githubIcon} alt="GitHub icon" /> </a>
+                                    <a target="_blank" rel="noreferrer" aria-label={`link to Github ${name} Repo`} href={gitHub}> <img src={githubIcon} alt="GitHub icon" /> </a>
                                 </li>
                                 <li>
-                                    <a target="_blank" href={liveLink}>View Live Site</a>
+                                    <a target="_blank" rel="noreferrer" href={liveLink}>View Live Site</a>
                                 </li>
                             </ul>
                         </div>
@@ -36,10 +36,10 @@ const Project = ({className, name, position, liveLink, gitHub, description, imag
                             <div className="links left">
                             <ul>
                                 <li>
-                                <a target="_blank" aria-label={`link to Github ${name} Repo`} href={gitHub}> <img src={githubIcon} alt="GitHub icon" /> </a>
+                                <a target="_blank" rel="noreferrer" aria-label={`link to Github ${name} Repo`} href={gitHub}> <img src={githubIcon} alt="GitHub icon" /> </a>
                                 </li>
                                 <li>
-                                    <a target="_blank" href={liveLink}>View Live Site</a>
+                                    <a target="_blank" rel="noreferrer" href={liveLink}>View Live Site</a>
                                 </li>
                             </ul>
                             </div>

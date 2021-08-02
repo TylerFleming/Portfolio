@@ -1,21 +1,34 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import gsap from "gsap"
 
 
 const Intro = ({className}) => {
 
+    const [ isMobile, setIsMobile ] = useState(false)
+
+    const windowSize = window.innerWidth;
+
+    const checkIsMobile = () => {
+        if ( windowSize < 768 ) {
+            return
+        } else {
+            let introTimeLine = gsap.timeline({})
+            .fromTo('.intro', {background: 'white' }, {background: 'rgba(222, 222, 222, 0.46)'}, '+=1.4')
+            .fromTo('.intro__reveal__element', {height: '0px'}, {height: '120%', duration: 0.75}, '-=1')
+            .fromTo('.intro__reveal__element', {translateY: '0'}, {translateY: '110%', duration: 0.75}, '-=0.5')
+            .fromTo('.intro__background', {opacity: 0}, {opacity: 1}, '-=0.8')
+            .fromTo('.intro__headline', {opacity: 0}, {opacity: 1}, '-=1.1')
+            .fromTo('.slash', {opacity: 0, translateX: '-100%'}, {opacity: 1, translateX: '0'})
+            .fromTo('.stroke', {opacity: 0}, {opacity: 1}, '-=1.1')
+            .to('.text-filled', {textFillColor: 'transparent'})
+            .to('.intro__reveal__element', {display: 'none'}, '-=1.3')    
+        }
+    }
+
     useEffect( () => {
-        let introTimeLine = gsap.timeline({})
-        .fromTo('.intro', {background: 'white' }, {background: 'rgba(222, 222, 222, 0.46)'}, '+=1.4')
-        .fromTo('.intro__reveal__element', {height: '0px'}, {height: '120%', duration: 0.75}, '-=1')
-        .fromTo('.intro__reveal__element', {translateY: '0'}, {translateY: '110%', duration: 0.75}, '-=0.5')
-        .fromTo('.intro__background', {opacity: 0}, {opacity: 1}, '-=0.8')
-        .fromTo('.intro__headline', {opacity: 0}, {opacity: 1}, '-=1.1')
-        .fromTo('.slash', {opacity: 0, translateX: '-100%'}, {opacity: 1, translateX: '0'})
-        .fromTo('.stroke', {opacity: 0}, {opacity: 1}, '-=1.1')
-        .to('.text-filled', {textFillColor: 'transparent'})
-        .to('.intro__reveal__element', {display: 'none'}, '-=1.3')
-        
+
+        checkIsMobile()
+  
     }, [])
 
     return (

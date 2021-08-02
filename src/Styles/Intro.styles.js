@@ -35,6 +35,10 @@ export const StyledIntro = styled(Intro)`
             height: 100%;
             width: 100%;
             z-index: 1;
+
+            @media (max-width: 767px) {
+                display: none;
+            }
         }
 
         &__headline {

@@ -10,6 +10,9 @@ export const blueTheme = {
         oswald: 'Oswald, sans-serif'
     },
     fontSizes: {
+        nav: {
+            desktop: '5rem'
+        },
         bodyText: {
             desktop: '2.4rem',
             mobile: '6vw'
