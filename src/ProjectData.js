@@ -6,7 +6,7 @@ export const data = [
     {
         id: '1',
         name: 'KeyDown',
-        description: 'KeyDown is a full stack speed typing game that is built with React, Styled Components and React Router for the frontend and Node, Express and MySQL for the backend.  ',
+        description: 'KeyDown is a full stack speed typing game that is built with React, Styled Components and React Router for the frontend and Node, Express and MySQL for the backend. *This project is hosted on Heroku and may take a moment to load ',
         liveLink: "https://tf-keydown.herokuapp.com/",
         gitHub: "https://github.com/TylerFleming/KeyDown",
         image: `${keydown}`,
