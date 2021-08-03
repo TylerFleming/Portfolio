@@ -77,7 +77,7 @@ const Tools = ({className}) => {
 
             <div className="statement">
                 <div className="statement__quote">“</div>
-                <p className="statement__text">I’ve been very fortunate in my career to work alongside some of the most caring people I know whom were also amazing developers, project managers and UI/UX designers. Through these experiences I’ve grown tremendously as a developer and to value doing things the right way, to help others and always seek opportunities to learn and grow.</p>
+                <p className="statement__text">I’ve been very fortunate in my career to work alongside some of the most caring people I know whom were also amazing developers, project managers, marketers and UI/UX designers. Through these experiences I’ve grown tremendously as a developer and to value doing things the right way, to help others and always seek opportunities to learn and grow.</p>
             </div>
 
             <div className="line"></div>
